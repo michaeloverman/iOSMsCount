@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,50 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MsCount" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LargeRound" translatesAutoresizingMaskIntoConstraints="NO" id="sOz-9j-g6f">
+                                <rect key="frame" x="107.5" y="97" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="CN5-z7-bzw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="Imz-Yn-kfl"/>
+                                    <constraint firstAttribute="width" constant="160" id="UJx-co-De3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="f1d-KB-8ph"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMf-5i-tar">
+                                <rect key="frame" x="0.0" y="206" width="375" height="255"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="-10" maxY="0.0"/>
+                                <state key="normal" title="Ms. Count Metronome" backgroundImage="LongHorz">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.87450980392156863" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sOz-9j-g6f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="3fU-vE-jyP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hMf-5i-tar" secondAttribute="trailing" id="3nn-9M-VJv"/>
+                            <constraint firstItem="hMf-5i-tar" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bsb-VY-9EM"/>
+                            <constraint firstItem="hMf-5i-tar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wh9-86-ZIZ"/>
+                            <constraint firstItem="hMf-5i-tar" firstAttribute="centerX" secondItem="sOz-9j-g6f" secondAttribute="centerX" id="YjK-Rr-v8v"/>
+                            <constraint firstItem="sOz-9j-g6f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lAr-GY-cYa"/>
+                            <constraint firstItem="hMf-5i-tar" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="ohn-98-upM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LargeRound" width="93" height="93"/>
+        <image name="LongHorz" width="256" height="256"/>
+    </resources>
 </document>
